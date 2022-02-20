@@ -36,7 +36,7 @@ app.get("/api/trips", async function (req, res) {
   res.status(200).json({ trips: responseData });
 });
 
-app.listen(9000, function () {
+app.listen(process.env.PORT || 9000, function () {
   console.log(
     'API Gateway Server Started at Port 9000'
   );
